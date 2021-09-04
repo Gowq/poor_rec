@@ -55,7 +55,7 @@ public class GUI {
 		comoUtilizarPanel = new ComoUtilizar(this);
 		passosPanel = new Passos(this);
 		calculoFinalPanel = new CalculoFinal(this);
-		//desafioPanel = new Desafio(this);
+		desafioPanel = new Desafio(this);
 		
 
 		frmAbaco.getContentPane().add(homePanel, BorderLayout.CENTER);

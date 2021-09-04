@@ -24,8 +24,8 @@ import java.text.ParseException;
 public class Utilizar extends JPanel {
 	
 	private JButton btnUtilizarVoltar;
-	private JTextField txfUtilizarOperando1;
-	private JTextField txfUtilizarOperando2;
+	public static JTextField txfUtilizarOperando1;
+	public static JTextField txfUtilizarOperando2;
 	private int numRandom;
 	
 	public Utilizar(GUI gui) throws ParseException {
@@ -68,7 +68,7 @@ public class Utilizar extends JPanel {
 		
 		JComboBox<String> comboBoxOperacao = new JComboBox<String>();
 		comboBoxOperacao.setModel(new DefaultComboBoxModel<String>(
-				new String[] {"Somar", "Subtrair", "1° Desafio", "2° Desafio"}));
+				new String[] {"Somar", "Subtrair"}));
 		comboBoxOperacao.setBounds(450, 60, 166, 44);
 		add(comboBoxOperacao);
 		

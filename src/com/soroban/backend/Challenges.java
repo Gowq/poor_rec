@@ -29,7 +29,9 @@ public class Challenges{
 
         soroban.setState(correctValue);
 
-        return soroban.printState();
+        soroban.printState();
+
+        return "a";
 
     }
 

@@ -1,5 +1,6 @@
 package com.soroban.gui;
 
+import com.soroban.backend.Operators;
 import com.soroban.gui.GUI;
 
 import java.awt.event.ActionEvent;
@@ -12,7 +13,6 @@ import javax.swing.JTextPane;
 
 public class CalculoFinal extends JPanel {	
 	private JButton btnComoUtilizarVoltar;
-
 	public CalculoFinal(GUI gui) {
 		super();
 		setBackground(new Color(47, 79, 79));
@@ -31,7 +31,17 @@ public class CalculoFinal extends JPanel {
 		this.add(btnComoUtilizarVoltar);
 		
 		JTextPane txtpnPlaceholder = new JTextPane();
-		txtpnPlaceholder.setText("PlaceHolder");
+		int num1 = 0, num2 = 0;
+
+		if (Utilizar.txfUtilizarOperando1.getText().equals(""))  num1 = 0;
+		else num1 = Integer.valueOf(Utilizar.txfUtilizarOperando1.getText());
+
+		if (Utilizar.txfUtilizarOperando2.getText().equals(""))  num2 = 0;
+		else num2 = Integer.valueOf(Utilizar.txfUtilizarOperando2.getText());
+
+		int sum = Operators.sum(num1, num2);
+
+		txtpnPlaceholder.setText(String.valueOf(sum));
 		txtpnPlaceholder.setBounds(158, 106, 488, 261);
 		add(txtpnPlaceholder);
 		
